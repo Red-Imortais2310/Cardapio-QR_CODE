@@ -11,6 +11,12 @@ Aplicar conceitos de desenvolvimento web utilizando HTML, CSS e JavaScript para 
 - **HTML5**: Estrutura semântica da página
 - **CSS3**: Estilização visual, layout em grid e responsividade
 - **JavaScript**: Interatividade com popup de imagens e leitura em voz alta
+## 📱 Acesse via QR Code
+
+Escaneie com seu celular para abrir o cardápio digital:
+
+![QR Code do Cardápio](qrcode.png)
+
 
 ## 📸 Funcionalidades
 

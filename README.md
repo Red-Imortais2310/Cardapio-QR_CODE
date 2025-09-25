@@ -11,6 +11,12 @@ Aplicar conceitos de desenvolvimento web utilizando HTML, CSS e JavaScript para 
 - **HTML5**: Estrutura semântica da página
 - **CSS3**: Estilização visual, layout em grid e responsividade
 - **JavaScript**: Interatividade com popup de imagens e leitura em voz alta
+## 📱 Acesse via QR Code
+
+Escaneie com seu celular para abrir o cardápio digital:
+
+![QR Code do Cardápio](qrcode.png)
+
 
 ## 📸 Funcionalidades
 
@@ -28,5 +34,10 @@ Aplicar conceitos de desenvolvimento web utilizando HTML, CSS e JavaScript para 
 - Suporte à navegação por teclado
 - Leitura automatizada do nome dos itens ao clicar nas imagens
 
+🔗 [Acesse o site do Cardápio Larica’s Bistrô](https://red-imortais2310.github.io/Cardapio-QR_CODE/)
+
+
 ## 📁 Estrutura de Arquivos
+├── index.html ├── style.css ├── img/ │ ├── Virado_Paulista.png │ ├── Feijoada.png │ ├── Moqueca.png │ ├── Strogonoff.png │ ├── Lasanha.png │ ├── Pudim.png │ ├── Brigadeiro.png │ ├── Torta_Limao.png │ ├── Mousse.png │ ├── Bolo_Cenoura.png
+
 

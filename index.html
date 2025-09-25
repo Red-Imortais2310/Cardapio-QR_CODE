@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Larica's Bistrô - Cardápio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Larica's Bistrô</h1>
+    <p>Cardápio do Dia</p>
+  </header>
+
+  <section class="menu-section">
+    <h2>🍽️ Pratos do Dia</h2>
+    <div class="menu-grid">
+      <div class="image prato1" role="img" aria-label="Virado à Paulista" tabindex="0"></div>
+      <div class="description">Virado à Paulista</div>
+
+      <div class="image prato2" role="img" aria-label="Feijoada" tabindex="0"></div>
+      <div class="description">Feijoada</div>
+
+      <div class="image prato3" role="img" aria-label="Moqueca" tabindex="0"></div>
+      <div class="description">Moqueca</div>
+
+      <div class="image prato4" role="img" aria-label="Strogonoff" tabindex="0"></div>
+      <div class="description">Strogonoff</div>
+
+      <div class="image prato5" role="img" aria-label="Lasanha" tabindex="0"></div>
+      <div class="description">Lasanha</div>
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <h2>🍰 Sobremesas</h2>
+    <div class="menu-grid">
+      <div class="image sobremesa1" role="img" aria-label="Pudim" tabindex="0"></div>
+      <div class="description">Pudim</div>
+
+      <div class="image sobremesa2" role="img" aria-label="Brigadeiro" tabindex="0"></div>
+      <div class="description">Brigadeiro</div>
+
+      <div class="image sobremesa3" role="img" aria-label="Torta de Limão" tabindex="0"></div>
+      <div class="description">Torta de Limão</div>
+
+      <div class="image sobremesa4" role="img" aria-label="Mousse" tabindex="0"></div>
+      <div class="description">Mousse</div>
+
+      <div class="image sobremesa5" role="img" aria-label="Bolo de Cenoura" tabindex="0"></div>
+      <div class="description">Bolo de Cenoura</div>
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <h2>🍹 Bebidas</h2>
+    <div class="menu-grid">
+      <div class="image bebida1" role="img" aria-label="Suco de Laranja"></div>
+      <div class="description">Suco de Laranja</div>
+
+      <div class="image bebida2" role="img" aria-label="Refrigerante"></div>
+      <div class="description">Refrigerante</div>
+
+      <div class="image bebida3" role="img" aria-label="Água com Gás"></div>
+      <div class="description">Água com Gás</div>
+
+      <div class="image bebida4" role="img" aria-label="Chá Gelado"></div>
+      <div class="description">Chá Gelado</div>
+
+      <div class="image bebida5" role="img" aria-label="Café"></div>
+      <div class="description">Café</div>
+    </div>
+  </section>
+
+  <div id="popup" class="popup-overlay">
+    <img id="popup-img" src="" alt="Imagem ampliada" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Larica's Bistrôquero. Todos os direitos reservados.</p>
+  </footer>
+
+<script>
+  const popup = document.getElementById('popup');
+  const popupImg = document.getElementById('popup-img');
+
+  document.querySelectorAll('.image').forEach(div => {
+    const isBebida = div.classList.contains('bebida1') ||
+                     div.classList.contains('bebida2') ||
+                     div.classList.contains('bebida3') ||
+                     div.classList.contains('bebida4') ||
+                     div.classList.contains('bebida5');
+
+    if (!isBebida) {
+      div.addEventListener('click', () => {
+        const style = getComputedStyle(div);
+        const bg = style.backgroundImage;
+        if (bg && bg !== 'none') {
+          const url = bg.slice(5, -2);
+          popupImg.src = url;
+          popup.classList.add('show');
+        }
+      });
+
+      // Acessibilidade: permite abrir com Enter
+      div.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          div.click();
+        }
+      });
+    }
+  });
+
+  // Fecha o popup ao clicar fora ou pressionar Esc
+  popup.addEventListener('click', () => {
+    popup.classList.remove('show');
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      popup.classList.remove('show');
+    }
+  });
+  function falar(texto) {
+  const fala = new SpeechSynthesisUtterance(texto);
+  fala.lang = 'pt-BR';
+  speechSynthesis.speak(fala);
+}
+
+// Exemplo: falar ao carregar a página
+window.onload = () => {
+  falar("Bem-vindo ao Larica's Bistrô. Confira o cardápio do dia.");
+};
+function falar(texto) {
+  const fala = new SpeechSynthesisUtterance(texto);
+  fala.lang = 'pt-BR';
+  speechSynthesis.speak(fala);
+}
+
+document.querySelectorAll('.image').forEach(div => {
+  const isBebida = div.classList.contains('bebida1') ||
+                   div.classList.contains('bebida2') ||
+                   div.classList.contains('bebida3') ||
+                   div.classList.contains('bebida4') ||
+                   div.classList.contains('bebida5');
+
+  // Captura o texto da descrição logo abaixo da imagem
+  const descricao = div.nextElementSibling?.textContent;
+
+  div.addEventListener('click', () => {
+    if (!isBebida) {
+      const style = getComputedStyle(div);
+      const bg = style.backgroundImage;
+      if (bg && bg !== 'none') {
+        const url = bg.slice(5, -2);
+        popupImg.src = url;
+        popup.classList.add('show');
+      }
+    }
+
+    // Fala o nome do item
+    if (descricao) {
+      falar(descricao);
+    }
+  });
+
+  // Permite ativar com Enter
+  div.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      div.click();
+    }
+  });
+});
+
+
+</script>
+</body>
+</html>
+
+
+
+

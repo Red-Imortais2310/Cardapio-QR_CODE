@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4c296;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #8b0000;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-section {
+  padding: 2rem 1rem;
+}
+
+.menu-section h2 {
+  margin-bottom: 1rem;
+  color: #8b0000;
+  font-size: 1.8rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.image {
+  position: relative;
+  height: 150px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Foco visível para acessibilidade */
+.image:focus {
+  outline: 3px solid #8b0000;
+}
+
+/* Imagens de pratos */
+.prato1 { background-image: url('img/Virado_Paulista.png'); }
+.prato2 { background-image: url('img/Feijoada.png'); }
+.prato3 { background-image: url('img/Moqueca.png'); }
+.prato4 { background-image: url('img/Strogonoff.png'); }
+.prato5 { background-image: url('img/Lasanha.png'); }
+
+/* Imagens de sobremesas */
+.sobremesa1 { background-image: url('img/Pudim.png'); }
+.sobremesa2 { background-image: url('img/Brigadeiro.png'); }
+.sobremesa3 { background-image: url('img/Torta_Limao.png'); }
+.sobremesa4 { background-image: url('img/Mousse.png'); }
+.sobremesa5 { background-image: url('img/Bolo_Cenoura.png'); }
+
+/* Bebidas */
+.bebida1,
+.bebida2,
+.bebida3,
+.bebida4,
+.bebida5 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.popup-overlay.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popup-overlay img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+/* Descrição */
+.description {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+

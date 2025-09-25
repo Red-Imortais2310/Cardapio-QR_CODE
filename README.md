@@ -28,5 +28,10 @@ Aplicar conceitos de desenvolvimento web utilizando HTML, CSS e JavaScript para 
 - Suporte à navegação por teclado
 - Leitura automatizada do nome dos itens ao clicar nas imagens
 
+🔗 [Acesse o site do Cardápio Larica’s Bistrô](https://red-imortais2310.github.io/Cardapio-QR_CODE/)
+
+
 ## 📁 Estrutura de Arquivos
+├── index.html ├── style.css ├── img/ │ ├── Virado_Paulista.png │ ├── Feijoada.png │ ├── Moqueca.png │ ├── Strogonoff.png │ ├── Lasanha.png │ ├── Pudim.png │ ├── Brigadeiro.png │ ├── Torta_Limao.png │ ├── Mousse.png │ ├── Bolo_Cenoura.png
+
 

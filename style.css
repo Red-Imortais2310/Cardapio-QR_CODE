@@ -73,17 +73,17 @@ header h1 {
 
 /* Imagens de pratos */
 .prato1 { background-image: url('img/Virado_Paulista.png'); }
-.prato2 { background-image: url('img/Feijoada.png'); }
-.prato3 { background-image: url('img/Moqueca.png'); }
-.prato4 { background-image: url('img/Strogonoff.png'); }
-.prato5 { background-image: url('img/Lasanha.png'); }
+.prato2 { background-image: url('img/moqueca.jpeg'); }
+.prato3 { background-image: url('img/feijoada.jpeg'); }
+.prato4 { background-image: url('img/estrogonoff.jpeg'); }
+.prato5 { background-image: url('img/Lasanha.jpeg'); }
 
 /* Imagens de sobremesas */
-.sobremesa1 { background-image: url('img/Pudim.png'); }
-.sobremesa2 { background-image: url('img/Brigadeiro.png'); }
-.sobremesa3 { background-image: url('img/Torta_Limao.png'); }
-.sobremesa4 { background-image: url('img/Mousse.png'); }
-.sobremesa5 { background-image: url('img/Bolo_Cenoura.png'); }
+.sobremesa1 { background-image: url('img/Pudim.jpeg'); }
+.sobremesa2 { background-image: url('img/Brigadeiro.jpeg'); }
+.sobremesa3 { background-image: url('img/Torta_Limao.jpeg'); }
+.sobremesa4 { background-image: url('img/Mousse.jpeg'); }
+.sobremesa5 { background-image: url('img/Bolo_Cenoura.jpeg'); }
 
 /* Bebidas */
 .bebida1,

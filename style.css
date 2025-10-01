@@ -72,29 +72,47 @@ header h1 {
 }
 
 /* Imagens de pratos */
-.prato1 { background-image: url('img/Virado_Paulista.png'); }
-.prato2 { background-image: url('img/moqueca.jpeg'); }
-.prato3 { background-image: url('img/feijoada.jpeg'); }
-.prato4 { background-image: url('img/estrogonoff.jpeg'); }
-.prato5 { background-image: url('img/Lasanha.jpeg'); }
+.prato1 { background-image: url('img/viradoPaulista.png'); }
+.prato2 { background-image: url('img/moqueca.png'); }
+.prato3 { background-image: url('img/feijoada.png'); }
+.prato4 { background-image: url('img/strogonoff.png'); }
+.prato5 { background-image: url('img/lasanha.png'); }
 
 /* Imagens de sobremesas */
-.sobremesa1 { background-image: url('img/Pudim.jpeg'); }
-.sobremesa2 { background-image: url('img/Brigadeiro.jpeg'); }
-.sobremesa3 { background-image: url('img/Torta_Limao.jpeg'); }
-.sobremesa4 { background-image: url('img/Mousse.jpeg'); }
-.sobremesa5 { background-image: url('img/Bolo_Cenoura.jpeg'); }
+.sobremesa1 { background-image: url('img/pudimLeite.png'); }
+.sobremesa2 { background-image: url('img/boloBrigadeiro.png'); }
+.sobremesa3 { background-image: url('img/tortaLimao.png'); }
+.sobremesa4 { background-image: url('img/mousseMaracuja.png'); }
+.sobremesa5 { background-image: url('img/BoloCenoura.png'); }
 
 /* Bebidas */
 .bebida1,
 .bebida2,
 .bebida3,
 .bebida4,
-.bebida5 {
+.bebida5
+{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Adicionando as imagens específicas para as bebidas */
+.bebida1 { background-image: url('img/sucoLaranja.png'); } /* Exemplo */
+.bebida2 { background-image: url('img/refrigerantes.png'); }   /* Exemplo */
+.bebida3 { background-image: url('img/aguaGas.png'); }  /* Exemplo */
+.bebida4 { background-image: url('img/chaGelado.png'); }    /* Exemplo */
+.bebida5 { background-image: url('img/cafe.png'); }     /* Exemplo */
+.bebida6 { background-image: url('img/cervejas.png'); }    /* Exemplo */
+.bebida7 { background-image: url('img/drink.png'); }     /* Exemplo */
+
+
+/* Imagens de porções */
+.porcao1 { background-image: url('img/batataFrita.png'); }
+.porcao2 { background-image: url('img/tabuaFrios.png'); }
+.porcao3 { background-image: url('img/frangoPassarinho.png'); }
+.porcao4 { background-image: url('img/contraFile.png'); }
+.porcao5 { background-image: url('img/lasanha.png'); }
 
 /* Popup */
 .popup-overlay {
